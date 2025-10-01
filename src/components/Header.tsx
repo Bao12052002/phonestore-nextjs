@@ -10,7 +10,7 @@ export default function Header() {
         </Link>
         <div>
           <Link href="/products" className="mr-6 hover:text-blue-300">
-            Sản phẩm1
+            Sản phẩm
           </Link>
           <Link href="/cart" className="hover:text-blue-300">
             Giỏ hàng
