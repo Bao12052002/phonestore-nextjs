@@ -1,14 +1,15 @@
-// src/app/layout.tsx
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header'; // Import Header
+import AppleHeader from '@/components/AppleHeader';
 
+// Apple uses a specific font called San Francisco Pro.
+// Inter is a good open-source alternative.
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'PhoneStore',
-  description: 'Cửa hàng điện thoại thế hệ mới',
+  title: 'Apple Clone',
+  description: 'A clone of the Apple website built with Next.js',
 };
 
 export default function RootLayout({
@@ -18,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-950 text-gray-100`}>
-        <Header /> {/* Thêm Header vào đây */}
-        <main className="container mx-auto p-4">{children}</main>
+      <body className={inter.className}>
+        <AppleHeader />
+        <main>{children}</main>
       </body>
     </html>
   );
